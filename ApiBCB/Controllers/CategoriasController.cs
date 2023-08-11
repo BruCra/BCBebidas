@@ -19,7 +19,7 @@ namespace ApiBCB.Controllers
             _icategorias = icategorias;
         }
 
-        [Authorize, HttpGet("GetCategorias")]
+        [HttpGet("GetCategorias")]
         public async Task<ActionResult> GetCategorias()
         {
             try
@@ -41,7 +41,7 @@ namespace ApiBCB.Controllers
             }
         }
 
-        [Authorize, HttpGet("{Id_Categoria}")]
+        [HttpGet("{Id_Categoria}")]
         public async Task<ActionResult> GetCategoriasById(int Id_Categoria)
         {
             try
@@ -70,7 +70,7 @@ namespace ApiBCB.Controllers
             }
         }
 
-        [Authorize, HttpPost("AddModifyCategorias")]
+        [HttpPost("AddModifyCategorias")]
         public async Task<ActionResult> AddModifyCategorias([FromBody] M_Categorias categorias)
         {
             try
